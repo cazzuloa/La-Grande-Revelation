@@ -1,0 +1,75 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 1em;
+    background-color: #9e1a1a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    & svg {
+        width: 1lh;
+        height: 1lh;
+        flex-shrink: 0;
+        color: #ffe600;
+    }
+
+    & .defilant {
+        flex: 1;
+        overflow: hidden;
+        min-width: 0;
+    }
+
+    & p {
+        margin: 0;
+
+        font-family: "Courier Prime", monospace;
+        font-weight: 700;
+        font-size: 1em;
+
+        text-transform: uppercase;
+        white-space: nowrap;
+        width: max-content;
+
+        animation: defiler 30s linear infinite;
+    }
+}
+
+@keyframes defiler {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+footer {
+    padding: 1em;
+    background-color: #14171F;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    & svg {
+        width: 1lh;
+        height: 1lh;
+        flex-shrink: 0;
+        color: #ffe600;
+    }
+
+    & p {
+        margin: 0;
+
+        text-align: center;
+
+        font-family: "Courier Prime", monospace;
+        font-weight: 700;
+        font-size: 1em;
+    }
+}

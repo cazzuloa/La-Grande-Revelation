@@ -20,33 +20,32 @@ body > header {
         color: #ffe600;
     }
 
-    & .defilant {
-        flex: 1;
-        overflow: hidden;
-        min-width: 0;
-    }
-
     & p {
         margin: 0;
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        display: flex;
 
         font-family: "Courier Prime", monospace;
         font-weight: 700;
         font-size: 1em;
-
         text-transform: uppercase;
         white-space: nowrap;
-        width: max-content;
 
-        animation: defiler 30s linear infinite;
+        & span {
+            flex-shrink: 0;
+            animation: defiler 30s linear infinite;
+        }
     }
 }
 
 @keyframes defiler {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-100%); }
 }
 
-footer {
+body > footer {
     padding: 1em;
     background-color: #14171F;
     color: white;
@@ -101,10 +100,6 @@ footer {
 
         & .content {
             margin: 2em;
-
-            display: flex;
-            align-items: center;
-            flex-direction: column;
 
             & .information {
                 color: red;

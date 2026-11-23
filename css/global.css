@@ -13,6 +13,8 @@ body > header {
     justify-content: center;
     gap: 0.5em;
 
+    overflow: hidden;
+
     & svg {
         width: 1lh;
         height: 1lh;
@@ -73,7 +75,7 @@ body > footer {
     }
 }
 
-.dossier {
+body > main {
     margin: 0;
     padding: 10em;
 
@@ -83,6 +85,16 @@ body > footer {
     font-family: "Courier Prime", monospace;
     font-weight: 700;
     font-size: 1em;
+
+    & a {
+        color: #01ff66;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
 
     & article {
         border: 0.2em solid #01ff66;
@@ -98,7 +110,7 @@ body > footer {
             }
         }
 
-        & .content {
+        & div {
             margin: 2em;
 
             & .information {
@@ -202,6 +214,53 @@ body > footer {
                         background-color: #ff3b3b;
                         color: #0a0b0e;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    body > main {
+        padding: 3em;
+    }
+}
+
+@media (max-width: 767px) {
+    body > header {
+        padding: 0.7em;
+
+        & svg {
+            width: 0.7lh;
+            height: 0.7lh;
+        }
+
+        & p {
+            font-size: 0.7em;
+        }
+    }
+
+    body > footer {
+        padding: 0.7em;
+
+        & svg {
+            width: 0.7lh;
+            height: 0.7lh;
+        }
+
+        & p {
+            font-size: 0.7em;
+        }
+    }
+
+    body > main {
+        padding: 0.5em;
+        font-size: 0.7em;
+
+        & article {
+            & header {
+                & p {
+                    font-size: 0.85em;
                 }
             }
         }

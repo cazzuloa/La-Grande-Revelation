@@ -27,7 +27,7 @@ body > header {
         width: 1lh;
         height: 1lh;
         flex-shrink: 0;
-        color: var(--yellow);
+        color: var(--highlight);
     }
 
     & p {
@@ -69,7 +69,7 @@ body > footer {
         width: 1lh;
         height: 1lh;
         flex-shrink: 0;
-        color: var(--yellow);
+        color: var(--highlight);
     }
 
     & p {

@@ -10,9 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/dark.css">
+    <link id="theme-link" rel="stylesheet" href="../css/dark.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/grille-pain.css">
+
+    <script src="../js/theme-changer.js"></script>
 </head>
 <body>
     <header>
@@ -33,8 +35,16 @@
             <a href="../index.html">> Retour aux archives du bunker</a>
             <article>
                 <header>
-                    <p>root@bunker:~/archives/dossier_004.log</p>
-                    <p>status : décrypté (99.8%)</p>
+                    <dl>
+                        <div>
+                            <dt>source :</dt>
+                            <dd>root@bunker:~/archives/dossier_004.log</dd>
+                        </div>
+                        <div>
+                            <dt>status :</dt>
+                            <dd>décrypté (99.8%)</dd>
+                        </div>
+                    </dl>
                 </header>
                 <div>
                     <p class="information">[!] ATTENTION : Ce document a été extrait de la mémoire vive d'un grille-pain Moulinex 2 fentes lors d'une coupure de courant.</p>

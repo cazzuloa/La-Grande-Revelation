@@ -24,12 +24,35 @@ body > main {
 
         & header {
             display: flex;
-            justify-content: space-between;
 
-            background-color: var(--green);
+            background-color: var(--green-bg);
 
-            & p {
+            & dl {
+                flex: 1;
+                min-width: 0;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 1em;
+
                 text-transform: uppercase;
+
+                & div {
+                    display: flex;
+                    gap: 1ch;
+
+                    margin: 0;
+                }
+
+                & dt,
+                & dd {
+                    margin: 0;
+                }
+
+                & dt {
+                    white-space: nowrap;
+                }
             }
         }
 
@@ -38,7 +61,7 @@ body > main {
 
             & .information {
                 color: var(--red-2);
-                background-color: color-mix(in srgb, var(--red) 50%, transparent);
+                background-color: color-mix(in srgb, var(--red-2) 15%, transparent);
                 border: 0.1em solid var(--red-2);
 
                 padding: 1em;
@@ -62,7 +85,7 @@ body > main {
                 & th,
                 & td {
                     padding: 0.9em 1em;
-                    border: 1px solid var(--background-g);
+                    border: 1px solid var(--border);
                 }
 
                 & thead th {
@@ -150,7 +173,7 @@ body > main {
 
         & article {
             & header {
-                & p {
+                & dl {
                     font-size: 0.85em;
                 }
             }

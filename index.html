@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Notre magnifique CSS -->
-    <link rel="stylesheet" href="css/dark.css">
+    <link id="theme-link" rel="stylesheet" href="css/dark.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
 
@@ -54,15 +54,15 @@
         </svg>
     </header>
     <main>
-        <section class="banner" aria-labelledby="banner">
-            <h1>La Grande Révélation</h1>
+        <section class="banner" aria-labelledby="banner-title">
+            <h1 id="banner-title">La Grande Révélation</h1>
             <button class="button" type="button" onclick="alert('Trop tard, ils savent')" id="supprime-mes-traces">[ EFFACER MES TRACES ]</button>
         </section>
         <section class="hero" aria-labelledby="hero-title">
             <hr>
             <p class="warning">ARCHIVES DÉCLASSIFIÉES // ACCÈS NON AUTORISÉ</p>
 
-            <h2 class="title">
+            <h2 class="title" id="hero-title">
                 ILS PENSENT QUE VOUS DORMEZ.
                 <strong>OUVREZ LES YEUX.</strong>
             </h2>
@@ -89,9 +89,11 @@
             <article>
                 <header>
                     <h2>DOSSIER #001 // GÉOGRAPHIE INTERDITE</h2>
-                    <p>censuré</p>
+                    <ul class="article-tags">
+                        <li>censuré</li>
+                    </ul>
                 </header>
-                <p class="article-title">La Terre est plate : une théorie sans relief ?</p>
+                <h3 class="article-title">La Terre est plate : une théorie sans relief ?</h3>
                 <p>
                     On nous montre des images de synthèse depuis 1969, mais la réalité est
                     sous nos pieds : l'horizon est parfaitement droit. Si la Terre était
@@ -111,9 +113,11 @@
             <article>
                 <header>
                     <h2>DOSSIER #002 // MÉTÉO CHIMIQUE</h2>
-                    <p>Big Pharma</p>
+                    <ul class="article-tags">
+                        <li>Big Pharma</li>
+                    </ul>
                 </header>
-                <p class="article-title">Les arcs-en-ciel : un coup de Big Pharma ?</p>
+                <h3 class="article-title">Les arcs-en-ciel : un coup de Big Pharma ?</h3>
                 <p>
                     Avez-vous remarqué qu'ils apparaissent uniquement après la pluie, pile
                     au moment où les gens risquent d'attraper un rhume ? Ce ne sont pas des
@@ -133,9 +137,11 @@
             <article>
                 <header>
                     <h2>DOSSIER #003 // DRONES BIOLOGIQUES</h2>
-                    <p>surveillance</p>
+                    <ul class="article-tags">
+                        <li>surveillance</li>
+                    </ul>
                 </header>
-                <p class="article-title">Les pigeons nous écoutent : un roucoulement suspect ?</p>
+                <h3 class="article-title">Les pigeons nous écoutent : un roucoulement suspect ?</h3>
                 <p>
                     Pourquoi les pigeons se posent-ils toujours sur les fils électriques ?
                     Pour recharger leurs batteries par induction. Leur prétendu
@@ -155,9 +161,11 @@
             <article>
                 <header>
                     <h2 class="article-number">DOSSIER #004 // ESPIONNAGE CULINAIRE</h2>
-                    <p class="article-tag">Top secret NASA</p>
+                    <ul class="article-tags">
+                        <li>Top secret NASA</li>
+                    </ul>
                 </header>
-                <p class="article-title">Votre grille-pain travaille-t-il pour la NASA ?</p>
+                <h3 class="article-title">Votre grille-pain travaille-t-il pour la NASA ?</h3>
                 <p>
                     Sous couvert de dorer vos tartines du matin, les résistances
                     chauffantes scannent vos empreintes digitales sur le pain de mie et
@@ -168,7 +176,7 @@
                     rien, si ce n'est à activer le micro haute portée.
                 </p>
                 <footer>
-                    <a href="#">
+                    <a href="pages/grille-pain.html">
                         ➔ DÉMONTER MON GRILLE-PAIN
                     </a>
                 </footer>

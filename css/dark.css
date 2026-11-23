@@ -1,6 +1,6 @@
 :root {
     --red : #9e1a1a;
-    --red-2 : red;
+    --red-2 : #ff6060;
     --red-3 : #ff3b3b;
     --yellow : #ffe600;
     --yellow-2 : #e6c619;
@@ -18,4 +18,6 @@
     --signals-bg: #10131a;
     --card-alt: #0d0f14;
     --card-text: #cbd5e1;
+    --highlight : #ffe600;
+    --green-bg : #00ff66;
 }

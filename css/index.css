@@ -5,10 +5,10 @@ body > main {
         justify-content: space-around;
 
         & button {
-            color: var(--red);
+            color: var(--red-3);
             background-color: transparent;
 
-            border: solid 0.1em var(--red);
+            border: solid 0.1em var(--red-3);
 
             overflow: hidden;
             outline: none;
@@ -71,7 +71,7 @@ body > main {
                 padding: 0.1em;
 
                 color: var(--black);
-                background: var(--yellow);
+                background: var(--highlight);
             }
         }
 
@@ -106,7 +106,7 @@ body > main {
 
                 gap: 2em;
 
-                color: var(--red);
+                color: var(--red-3);
 
                 & .green {
                     color: var(--green);
@@ -159,30 +159,36 @@ body > main {
 
                 & h2 {
                     margin: 0;
-                    color: #00ff66;
+                    color: var(--green);
 
                     font-weight: 400;
                 }
 
-                & p {
+                & .article-tags {
                     flex: 0 0 auto;
 
                     margin: -5px 0 0;
-                    padding: 5px 10px;
+                    padding: 0;
 
-                    border: 1px solid rgb(255 42 42 / 35%);
+                    color: var(--red-3);
 
-                    color: #ff2a2a;
-
-                    font-weight: 700;
-
+                    list-style: none;
                     text-transform: uppercase;
+
+                    & li {
+                        padding: 5px 10px;
+
+                        border: 1px solid color-mix(in srgb, var(--red-3) 35%, transparent);
+
+                        line-height: 1.5;
+                    }
                 }
             }
 
             & .article-title {
                 font-size: 1.5em;
                 font-weight: 700;
+                line-height: 1.5;
             }
 
             & p {
@@ -214,6 +220,61 @@ body > main {
                 & a:hover {
                     text-decoration: underline;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    body > main {
+        & .article-list {
+            gap: 1.5em;
+
+            & article {
+                & header {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body > main {
+        padding: 0.5em;
+        font-size: 0.7em;
+
+        & .banner {
+            flex-wrap: wrap;
+
+            & button {
+                padding: 0.7em 1em;
+                margin: 0.5em;
+            }
+        }
+
+        & .hero {
+            & .title {
+                font-size: 1.5em;
+            }
+
+            & ul {
+                gap: 1em;
+
+                & li {
+                    flex-wrap: wrap;
+                    gap: 1em;
+                }
+            }
+        }
+
+        & .article-list {
+            grid-template-columns: minmax(0, 512px);
+            gap: 1.5em;
+            margin: 0.5em;
+
+            & article {
+                padding: 1em;
             }
         }
     }

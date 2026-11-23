@@ -1,0 +1,13 @@
+:root {
+    --bg: #0a0b0e;
+    --text: #ffffff;
+    --muted: #8f9bb3;
+    --title: #e5e9f0;
+    --card: #14171f;
+    --card-alt: #0d0f14;
+    --card-text: #cbd5e1;
+    --footer-bg: #14171f;
+    --footer-text: #ffffff;
+    --hero-bg: rgba(10, 11, 14, 0.95);
+    --signals-bg: rgba(16, 19, 26, 1);
+}

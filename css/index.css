@@ -1,0 +1,220 @@
+body > main {
+    
+    & .banner {
+        display: flex;
+        justify-content: space-around;
+
+        & button {
+            color: var(--red);
+            background-color: transparent;
+
+            border: solid 0.1em var(--red);
+
+            overflow: hidden;
+            outline: none;
+
+            font-size: 1.2em;
+            font-weight: 700;
+
+            padding: 0.7em 2em;
+            margin: 1em;
+        }
+
+        .button {
+            transition-duration: 0.3s;
+        }
+
+        .button:hover {
+            background-color: var(--red);
+            color: var(--white);
+        }
+    }
+
+    & .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        padding: 1em;
+
+        & hr {
+            align-self: stretch;
+            width: 100%;
+            margin: 2em 0 1.5em;
+
+            border: none;
+            border-top: 1px solid var(--black);
+        }
+
+        & .warning {
+            margin: auto;
+            padding: 0.5em 1em;
+
+            background: color-mix(in srgb, var(--yellow) 15%, transparent);
+            border: 0.1em solid color-mix(in srgb, var(--yellow) 80%, transparent);
+            color: var(--yellow);
+
+            text-align: center;
+        }
+
+        & .title {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+            font-size: 2.3em;
+            font-weight: 700;
+
+            & strong {
+                margin: auto;
+                padding: 0.1em;
+
+                color: var(--black);
+                background: var(--yellow);
+            }
+        }
+
+        & .description {
+            color: var(--muted);
+            max-width: 60ch;
+            margin: 0 auto;
+        }
+
+        & ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+
+            padding-left: 1em;
+            padding-right: 1em;
+
+            background: var(--signals-bg);
+
+            border: 0.1em solid var(--border);
+            border-radius: 0.1em;
+
+            list-style: none;
+
+            max-width: 150ch;
+            align-self: center;
+
+            & li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                gap: 2em;
+
+                color: var(--red);
+
+                & .green {
+                    color: var(--green);
+                }
+
+                & strong {
+                    color: var(--text);
+                }
+            }
+        }
+    }
+
+    & .article-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 512px));
+        justify-content: center;
+
+        gap: 2.5em;
+
+        margin: 1em;
+
+        & > h2 {
+            grid-column: 1 / -1;
+            margin: 0;
+            text-align: center;
+            font-size: 2em;
+            text-transform: uppercase;
+            color: var(--yellow);
+        }
+
+
+        & article {
+            display: flex;
+            flex-direction: column;
+
+            padding: 2em;
+            background: var(--signals-bg);
+
+            border: 0.1em solid var(--border);
+
+            & header {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 1em;
+
+                font-family: "Space Mono", monospace;
+                font-size: 1em;
+                font-weight: 700;
+
+                & h2 {
+                    margin: 0;
+                    color: #00ff66;
+
+                    font-weight: 400;
+                }
+
+                & p {
+                    flex: 0 0 auto;
+
+                    margin: -5px 0 0;
+                    padding: 5px 10px;
+
+                    border: 1px solid rgb(255 42 42 / 35%);
+
+                    color: #ff2a2a;
+
+                    font-weight: 700;
+
+                    text-transform: uppercase;
+                }
+            }
+
+            & .article-title {
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+
+            & p {
+                line-height: 1.5;
+            }
+
+            & .article-proof {
+                background: var(--card-alt);
+                color: var(--card-text);
+
+                border-left: 0.2em solid var(--yellow);
+                padding-left: 1em;
+
+                & strong {
+                    color: var(--yellow);
+                }
+            }
+
+            & footer {
+                & a {
+                    color: var(--green);
+
+                    font-size: 1em;
+                    font-weight: 700;
+
+                    text-decoration: none;
+                }
+
+                & a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+body > main {
+    margin: 0;
+    padding: 10em;
+
+    background-color: var(--background);
+    color: var(--black);
+
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-size: 1em;
+
+    & a {
+        color: var(--green);
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+
+    & article {
+        border: 0.2em solid var(--green);
+
+        & header {
+            display: flex;
+            justify-content: space-between;
+
+            background-color: var(--green);
+
+            & p {
+                text-transform: uppercase;
+            }
+        }
+
+        & div {
+            margin: 2em;
+
+            & .information {
+                color: var(--red-2);
+                background-color: color-mix(in srgb, var(--red) 50%, transparent);
+                border: 0.1em solid var(--red-2);
+
+                padding: 1em;
+            }
+
+            & .question {
+                color: var(--green);
+                
+                font-size: 2em;
+            }
+
+            & .texte {
+                color: var(--text);
+            }
+
+            & table {
+                width: 100%;
+                align-self: stretch;
+                border-collapse: collapse;
+
+                & th,
+                & td {
+                    padding: 0.9em 1em;
+                    border: 1px solid var(--background-g);
+                }
+
+                & thead th {
+                    background-color: var(--background-g);
+                    color: var(--green-2);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.03em;
+                }
+
+                & tbody {
+                    & th,
+                    & td {
+                        color: var(--white-2);
+                        font-weight: 400;
+                    }
+
+                    & tr:hover {
+                        background-color: var(--brakground-g-2);
+                    }
+
+                    & tr:nth-child(1) td:last-child { color: var(--yellow-2); }
+                    & tr:nth-child(2) td:last-child { color: var(--red-3); }
+                    & tr:nth-child(3) td:last-child { color: var(--green-2); }
+                }
+            }
+
+            & hr {
+                align-self: stretch;
+                width: 100%;
+                margin: 2em 0 1.5em;
+
+                border: none;
+                border-top: 1px solid var(--background-g);
+            }
+
+            & .actions {
+                align-self: stretch;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+
+                & button {
+                    padding: 0.9em 1.2em;
+                    background-color: transparent;
+                    border: 1px solid currentColor;
+
+                    font-family: "Courier Prime", monospace;
+                    font-size: 0.8em;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+
+                    cursor: pointer;
+                    transition: background-color 0.2s, color 0.2s;
+                }
+
+                & .btn-scan {
+                    color: var(--green-2);
+
+                    &:hover,
+                    &:focus-visible {
+                        background-color: var(--green-2);
+                        color: var(--background);
+                    }
+                }
+
+                & .btn-purge {
+                    color: var(--red-3);
+
+                    &:hover,
+                    &:focus-visible {
+                        background-color: var(--red-3);
+                        color: var(--background);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body > main {
+        padding: 0.5em;
+        font-size: 0.7em;
+
+        & article {
+            & header {
+                & p {
+                    font-size: 0.85em;
+                }
+            }
+        }
+    }
+}

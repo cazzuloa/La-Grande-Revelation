@@ -9,6 +9,10 @@ body > main {
     font-weight: 700;
     font-size: 1em;
 
+    & h1 {
+        display: none;
+    }
+
     & a {
         color: var(--green);
         text-transform: uppercase;

@@ -1,0 +1,223 @@
+body > main {
+    margin: 0;
+    padding: 10em;
+
+    background-color: var(--background);
+    color: var(--text);
+
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-size: 1em;
+
+    & > a {
+        display: inline-block;
+        margin-bottom: 2em;
+
+        color: var(--green);
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    & > a:hover {
+        text-decoration: underline;
+    }
+
+    & > section {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        padding: 3em;
+        background: var(--signals-bg);
+
+        border: 0.2em solid var(--border);
+
+        & > header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            & .titre {
+                margin: 0;
+                padding: 0.3em 0.8em;
+
+                background-color: var(--red-3);
+                color: var(--white);
+
+                font-family: "Space Mono", monospace;
+                font-size: 0.8em;
+            }
+
+            & h1 {
+                font-size: 2.3em;
+                line-height: 1.6;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+
+            & .description {
+                margin: 0;
+
+                color: var(--muted);
+                font-weight: 400;
+                letter-spacing: 0.05em;
+            }
+        }
+
+        & > hr {
+            width: 100%;
+            margin: 0;
+
+            border: none;
+            border-top: 2px dashed var(--red-3);
+        }
+
+        & .indices {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5em;
+
+            & article {
+                position: relative;
+
+                padding: 1.5em;
+                background: var(--card-alt);
+
+                border: 0.1em solid var(--border);
+                box-shadow: 0.4em 0.4em 0 color-mix(in srgb, var(--red) 50%, transparent);
+
+                & header {
+                    & h2 {
+                        margin-top: 0;
+
+                        color: var(--yellow);
+                        font-size: 1em;
+                        line-height: 1.8;
+                        text-transform: uppercase;
+                    }
+                }
+
+                & p {
+                    color: var(--card-text);
+                    font-weight: 400;
+                    line-height: 1.9;
+                    letter-spacing: 0.05em;
+                }
+
+                & blockquote {
+                    margin: 0;
+                }
+            }
+        }
+
+        & .schema {
+            margin: 0;
+
+            & figcaption {
+                margin-bottom: 1.5em;
+
+                color: var(--green);
+                font-size: 1.2em;
+                text-transform: uppercase;
+            }
+
+            & pre {
+                margin: 0;
+                padding: 2em 3em;
+                overflow-x: auto;
+
+                background: var(--card-alt);
+                color: var(--green);
+
+                border: 0.1em solid var(--green);
+
+                font-weight: 400;
+                font-size: 0.9em;
+                line-height: 2.5;
+            }
+        }
+
+        & .chronologie {
+            margin: 0;
+            padding: 0 0 0 1.5em;
+
+            border-left: 0.2em solid var(--red-3);
+
+            list-style: none;
+
+            & li {
+                position: relative;
+                margin-bottom: 1.5em;
+
+                &::before {
+                    content: "";
+
+                    position: absolute;
+                    top: 0.35em;
+                    left: calc(-1.5em - 0.45em);
+
+                    width: 0.7em;
+                    height: 0.7em;
+
+                    background: var(--red-3);
+                    border-radius: 50%;
+                }
+
+                & p {
+                    margin: 0;
+
+                    color: var(--white-2);
+                    font-weight: 400;
+                    line-height: 1.8;
+                    letter-spacing: 0.05em;
+                }
+
+                & .date {
+                    color: var(--red-3);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+
+            & li:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    body > main {
+        padding: 3em;
+
+        & > section {
+            & .indices {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body > main {
+        padding: 0.5em;
+        font-size: 0.7em;
+
+        & > section {
+            padding: 1.5em;
+
+            & > header {
+                & h1 {
+                    font-size: 1.5em;
+                }
+            }
+
+            & .schema {
+                & pre {
+                    padding: 1em;
+                }
+            }
+        }
+    }
+}

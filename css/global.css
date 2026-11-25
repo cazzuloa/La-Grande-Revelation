@@ -83,6 +83,30 @@ body > footer {
     }
 }
 
+body > .lutins {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    & img {
+        position: absolute;
+        top: -8em;
+        left: var(--x);
+
+        width: var(--taille);
+        height: auto;
+
+        animation: pleuvoir var(--duree) linear var(--delai) infinite;
+    }
+}
+
+@keyframes pleuvoir {
+    from { transform: translateY(0) rotate(-10deg); }
+    50% { transform: translateY(calc(50vh + 8em)) rotate(10deg); }
+    to { transform: translateY(calc(100vh + 16em)) rotate(-10deg); }
+}
+
 @media (max-width: 1023px) {
     body > main {
         padding: 3em;
@@ -114,5 +138,11 @@ body > footer {
         & p {
             font-size: 0.7em;
         }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body > .lutins {
+        display: none;
     }
 }

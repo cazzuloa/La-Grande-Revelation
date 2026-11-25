@@ -1,3 +1,6 @@
+/* Thème arc-en-ciel : palette pastel et dégradé animé derrière le contenu.
+   Ce thème est déclenché par le lien « analyse spectrale » de la page d'accueil */
+
 :root {
     --red : #c92a63;
     --red-2 : #9a0c3f;
@@ -13,7 +16,7 @@
     --border : #e9a3cf;
     --text : #2b2152;
     --background-g : #dcf5e8;
-    --brakground-g-2 : #06623c14;
+    --background-g-2 : #06623c14;
     --muted : #5a4d80;
     --signals-bg : #ffffffed;
     --card-alt : #fbe6f4;
@@ -27,6 +30,7 @@ html body > main {
     background: transparent;
 }
 
+/* Le dégradé glisse derrière le contenu. Seul transform est animé, ce qui reste fluide */
 html body::before {
     content: "";
 
@@ -39,14 +43,15 @@ html body::before {
     height: 100%;
 
     background: linear-gradient(115deg, #ffd3e0, #ffe6c9, #fff8c4, #d2f6d2, #cfeeff, #e3daff, #ffd3f4, #ffd3e0);
-    animation: glisser 18s ease-in-out infinite alternate;
+    animation: slide 18s ease-in-out infinite alternate;
 }
 
-@keyframes glisser {
+@keyframes slide {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
 }
 
+/* Réduction des mouvements demandée par le visiteur : le dégradé reste figé */
 @media (prefers-reduced-motion: reduce) {
     html body::before {
         animation: none;

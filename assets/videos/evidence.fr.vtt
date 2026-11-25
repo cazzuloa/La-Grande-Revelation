@@ -1,0 +1,19 @@
+WEBVTT
+
+NOTE
+Modèle de sous-titres à adapter à la vidéo déposée.
+Remplacer les horodatages et les textes par ceux de votre enregistrement.
+Format des temps : hh:mm:ss.mmm. Deux lignes de 37 caractères au maximum par sous-titre.
+
+1
+00:00:01.000 --> 00:00:04.000
+Premier sous-titre : ce qui est dit dans la vidéo.
+
+2
+00:00:04.500 --> 00:00:08.000
+Deuxième sous-titre,
+sur deux lignes au maximum.
+
+3
+00:00:08.500 --> 00:00:12.000
+[Aperçu d'un sous-titre décrivant un son]

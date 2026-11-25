@@ -1,3 +1,5 @@
+/* Thème clair : palette de couleurs du site */
+
 :root {
     --red : #a4161a;
     --red-2 : #9b1c1c;
@@ -13,7 +15,7 @@
     --border : #cdc6b8;
     --text : #1c1f26;
     --background-g : #dfeee4;
-    --brakground-g-2 : #0b6e3514;
+    --background-g-2 : #0b6e3514;
     --muted : #5a6272;
     --signals-bg : #ffffff;
     --card-alt : #efeadd;

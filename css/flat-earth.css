@@ -1,3 +1,6 @@
+/* Page « La Terre est plate » : article principal à gauche, éléments annexes à droite.
+   Marges réduites sur tablette, une seule colonne sur mobile. */
+
 body > main {
     margin: 0;
     padding: 10em;
@@ -13,11 +16,8 @@ body > main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2em;
 
-    & h1 {
-        display: none;
-    }
-
-    & a {
+    /* Lien de retour vers l'accueil : toute la largeur, au-dessus des deux colonnes */
+    & > a {
         grid-column: 1 / -1;
 
         color: var(--green);
@@ -25,11 +25,12 @@ body > main {
         text-decoration: none;
     }
 
-    & a:hover {
+    & > a:hover {
         text-decoration: underline;
     }
 
-    & .gauche {
+    /* Article principal */
+    & .main-column {
         & article {
             display: flex;
             flex-direction: column;
@@ -40,12 +41,15 @@ body > main {
             border: 0.1em solid var(--border);
 
             & header {
-                & .titre {
+                & .file-label {
                     color: var(--green);
                 }
 
-                & h2 {
+                & h1 {
+                    margin: 0.4em 0 0.3em;
+
                     font-size: 2em;
+                    line-height: 1.3;
                 }
 
                 & .description {
@@ -59,20 +63,43 @@ body > main {
                 color: var(--white-2);
             }
 
-            & h3 {
+            /* Sous-titres numérotés de l'article */
+            & h2 {
                 color: var(--green);
+                font-size: 1.17em;
+            }
+
+            /* Passage censuré : masqué par une bande, révélé au clic (voir redacted-text.js) */
+            & .redacted {
+                padding: 0 0.3em;
+
+                background-color: var(--text);
+                color: transparent;
+
+                border-radius: 0.2em;
+
+                cursor: pointer;
+
+                &:focus-visible {
+                    outline: 0.15em solid var(--yellow);
+                    outline-offset: 0.1em;
+                }
+
+                &.revealed {
+                    background-color: var(--highlight);
+                    color: var(--black);
+
+                    cursor: text;
+                }
             }
         }
     }
 
-    & .droite {
+    /* Éléments annexes : fiche technique et pièces à conviction */
+    & .side-column {
         display: flex;
         flex-direction: column;
         gap: 1em;
-        
-        & .titre {
-            display: none;
-        }
 
         & article {
             padding: 2em;
@@ -87,10 +114,12 @@ body > main {
                 }
             }
 
+            /* Trait sous le titre : couleur moyenne, visible dans les trois thèmes */
             & hr {
-                color: var(--black);
+                color: var(--muted);
             }
 
+            /* Liste sans puces : chaque item commence par une flèche */
             & ul {
                 padding: 0;
 
@@ -114,12 +143,14 @@ body > main {
     }
 }
 
+/* Tablettes : marges réduites */
 @media (max-width: 1023px) {
     body > main {
         padding: 3em;
     }
 }
 
+/* Mobile : une seule colonne, police et marges réduites */
 @media (max-width: 767px) {
     body > main {
         padding: 0.5em;

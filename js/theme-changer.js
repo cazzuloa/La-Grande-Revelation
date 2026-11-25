@@ -1,3 +1,6 @@
+/* Gestion du thème : la feuille de couleur (dark, white ou rainbow) est échangée via la
+   balise link#theme-link, et le choix est mémorisé dans le navigateur. */
+
 function initTheme() {
     const link = document.getElementById("theme-link");
 
@@ -6,61 +9,73 @@ function initTheme() {
     let theme = localStorage.getItem("theme");
     if (!["white", "rainbow"].includes(theme)) theme = "dark";
 
-    const lutinSrc = new URL("../assets/images/lutin.webp", document.currentScript.src).href;
-    const lutins = creerLutins();
+    const leprechaunSrc = new URL("../assets/images/leprechaun.webp", document.currentScript.src).href;
+    const leprechauns = createLeprechauns();
 
+    /* Applique un thème : échange la feuille de style, mémorise le choix
+       et affiche ou masque la pluie de lutins propre au thème arc-en-ciel */
     function setTheme(newTheme) {
         theme = newTheme;
-        link.href = new URL(`${theme}.css`, link.href).href;
+        link.href = new URL(`${theme}.min.css`, link.href).href;
         localStorage.setItem("theme", theme);
-        afficherLutins(theme === "rainbow");
+        showLeprechauns(theme === "rainbow");
     }
 
-    function afficherLutins(visible) {
-        if (visible && !lutins.childElementCount) {
+    /* Les images de lutins ne sont créées qu'au premier affichage :
+       l'image n'est pas téléchargée dans les autres thèmes */
+    function showLeprechauns(visible) {
+        if (visible && !leprechauns.childElementCount) {
             for (let i = 0; i < 12; i++) {
-                const lutin = document.createElement("img");
+                const leprechaun = document.createElement("img");
 
-                lutin.src = lutinSrc;
-                lutin.alt = "";
+                leprechaun.src = leprechaunSrc;
+                leprechaun.alt = "";
 
-                lutin.style.setProperty("--x", `${Math.random() * 100}vw`);
-                lutin.style.setProperty("--taille", `${2.5 + Math.random() * 2.5}em`);
-                lutin.style.setProperty("--duree", `${7 + Math.random() * 8}s`);
-                lutin.style.setProperty("--delai", `${-Math.random() * 15}s`);
+                leprechaun.style.setProperty("--x", `${Math.random() * 100}vw`);
+                leprechaun.style.setProperty("--size", `${2.5 + Math.random() * 2.5}em`);
+                leprechaun.style.setProperty("--duration", `${7 + Math.random() * 8}s`);
+                leprechaun.style.setProperty("--delay", `${-Math.random() * 15}s`);
 
-                lutins.append(lutin);
+                leprechauns.append(leprechaun);
             }
         }
 
-        lutins.hidden = !visible;
+        leprechauns.hidden = !visible;
     }
 
-    function creerLutins() {
-        const lutins = document.createElement("div");
+    /* Couche fixe au-dessus de la page : purement décorative, donc ignorée
+       des lecteurs d'écran (aria-hidden) et des clics (inert) */
+    function createLeprechauns() {
+        const leprechauns = document.createElement("div");
 
-        lutins.className = "lutins";
-        lutins.setAttribute("aria-hidden", "true");
-        lutins.setAttribute("inert", "");
-        lutins.hidden = true;
+        leprechauns.className = "leprechauns";
+        leprechauns.setAttribute("aria-hidden", "true");
+        leprechauns.setAttribute("inert", "");
+        leprechauns.hidden = true;
 
-        return lutins;
+        return leprechauns;
     }
 
-    document.addEventListener("DOMContentLoaded", () => document.body.append(lutins));
+    document.addEventListener("DOMContentLoaded", () => document.body.append(leprechauns));
 
     setTheme(theme);
 
+    /* Clics : le lien « analyse spectrale » de l'accueil bascule le thème arc-en-ciel,
+       le bouton « effacer mes traces » bascule entre sombre et blanc */
     document.addEventListener("click", (event) => {
-        if (event.target.closest("#analyse-spectrale")) {
+        if (event.target.closest("#spectral-analysis")) {
             event.preventDefault();
             setTheme(theme === "rainbow" ? "dark" : "rainbow");
         }
 
-        if (event.target.closest("#supprime-mes-traces")) {
+        if (event.target.closest("#clear-my-traces")) {
+            alert("Trop tard, ils savent");
             setTheme(theme === "dark" ? "white" : "dark");
         }
     });
+
+    /* Événement envoyé par la page du grille-pain (« purger le cache ») : retour au sombre */
+    document.addEventListener("reset-theme", () => setTheme("dark"));
 }
 
 initTheme();

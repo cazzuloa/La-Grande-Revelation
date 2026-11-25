@@ -1,5 +1,8 @@
+/* Page d'accueil : bandeau de titre, section d'introduction et liste des dossiers.
+   Deux colonnes d'articles sur ordinateur, une seule sur mobile. */
+
 body > main {
-    
+    /* Bandeau de titre : nom du site et bouton de changement de thème */
     & .banner {
         display: flex;
         justify-content: space-around;
@@ -11,13 +14,18 @@ body > main {
             border: solid 0.1em var(--red-3);
 
             overflow: hidden;
-            outline: none;
 
             font-size: 1.2em;
             font-weight: 700;
 
             padding: 0.7em 2em;
             margin: 1em;
+
+            /* Contour de focus visible au clavier */
+            &:focus-visible {
+                outline: 0.15em solid var(--yellow);
+                outline-offset: 0.1em;
+            }
         }
 
         .button {
@@ -30,6 +38,7 @@ body > main {
         }
     }
 
+    /* Section d'introduction : avertissement, titre, résumé et informations classifiées */
     & .hero {
         display: flex;
         flex-direction: column;
@@ -119,6 +128,7 @@ body > main {
         }
     }
 
+    /* Liste des dossiers : grille de cartes, le titre de la liste occupe toute la largeur */
     & .article-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 512px));
@@ -223,8 +233,46 @@ body > main {
             }
         }
     }
+
+    /* Preuve vidéo : le lecteur s'adapte à la largeur, rien n'est chargé avant la lecture */
+    & .evidence {
+        margin: 1em;
+        padding: 2em;
+
+        background: var(--signals-bg);
+
+        border: 0.1em solid var(--border);
+
+        & h2 {
+            margin: 0 0 1em;
+
+            color: var(--yellow);
+            font-size: 1.5em;
+        }
+
+        & figure {
+            margin: 0;
+
+            & video {
+                display: block;
+
+                width: 100%;
+                height: auto;
+
+                background-color: var(--black);
+            }
+
+            & figcaption {
+                margin-top: 0.8em;
+
+                color: var(--white-2);
+                font-weight: 400;
+            }
+        }
+    }
 }
 
+/* Tablettes : l'en-tête de chaque article (titre et étiquettes) peut passer sur deux lignes */
 @media (max-width: 1023px) {
     body > main {
         & .article-list {
@@ -239,6 +287,7 @@ body > main {
     }
 }
 
+/* Mobile : une seule colonne, police et marges réduites */
 @media (max-width: 767px) {
     body > main {
         padding: 0.5em;

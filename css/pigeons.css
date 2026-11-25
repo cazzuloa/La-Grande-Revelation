@@ -1,3 +1,6 @@
+/* Page « Les pigeons nous écoutent » : un dossier (titre, indices, schéma, chronologie).
+   Marges réduites sur tablette, police réduite sur mobile. */
+
 body > main {
     margin: 0;
     padding: 10em;
@@ -9,6 +12,7 @@ body > main {
     font-weight: 700;
     font-size: 1em;
 
+    /* Lien de retour vers l'accueil */
     & > a {
         display: inline-block;
         margin-bottom: 2em;
@@ -22,6 +26,7 @@ body > main {
         text-decoration: underline;
     }
 
+    /* Le dossier : une seule carte contient tout le contenu de la page */
     & > section {
         display: flex;
         flex-direction: column;
@@ -38,11 +43,12 @@ body > main {
             align-items: center;
             text-align: center;
 
-            & .titre {
+            /* Étiquette du dossier : texte blanc sur rouge, lisible dans les trois thèmes */
+            & .file-label {
                 margin: 0;
                 padding: 0.3em 0.8em;
 
-                background-color: var(--red-3);
+                background-color: var(--red);
                 color: var(--white);
 
                 font-family: "Space Mono", monospace;
@@ -65,6 +71,7 @@ body > main {
             }
         }
 
+        /* Séparateur en pointillés sous le titre */
         & > hr {
             width: 100%;
             margin: 0;
@@ -73,7 +80,8 @@ body > main {
             border-top: 2px dashed var(--red-3);
         }
 
-        & .indices {
+        /* Indices : trois cartes côte à côte sur ordinateur */
+        & .clues {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 1.5em;
@@ -111,7 +119,8 @@ body > main {
             }
         }
 
-        & .schema {
+        /* Schéma d'interception audio : texte préformaté dans un bloc */
+        & .diagram {
             margin: 0;
 
             & figcaption {
@@ -138,7 +147,8 @@ body > main {
             }
         }
 
-        & .chronologie {
+        /* Chronologie : une frise verticale, chaque étape porte un repère rond */
+        & .timeline {
             margin: 0;
             padding: 0 0 0 1.5em;
 
@@ -187,18 +197,20 @@ body > main {
     }
 }
 
+/* Tablettes : marges réduites, les indices s'empilent */
 @media (max-width: 1023px) {
     body > main {
         padding: 3em;
 
         & > section {
-            & .indices {
+            & .clues {
                 grid-template-columns: minmax(0, 1fr);
             }
         }
     }
 }
 
+/* Mobile : police et marges réduites */
 @media (max-width: 767px) {
     body > main {
         padding: 0.5em;
@@ -213,7 +225,7 @@ body > main {
                 }
             }
 
-            & .schema {
+            & .diagram {
                 & pre {
                     padding: 1em;
                 }

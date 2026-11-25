@@ -1,35 +1,37 @@
+/* Page du grille-pain : journal des transmissions de l'appareil.
+   Marges réduites sur tablette, police réduite sur mobile. */
+
 body > main {
     margin: 0;
     padding: 10em;
 
     background-color: var(--background);
-    color: var(--black);
+    color: var(--text);
 
     font-family: "Courier Prime", monospace;
     font-weight: 700;
     font-size: 1em;
 
-    & h1 {
-        display: none;
-    }
-
-    & a {
+    /* Lien de retour vers l'accueil */
+    & > a {
         color: var(--green);
         text-transform: uppercase;
         text-decoration: none;
     }
 
-    & a:hover {
+    & > a:hover {
         text-decoration: underline;
     }
 
     & article {
         border: 0.2em solid var(--green);
 
+        /* En-tête du dossier : source et statut, sur fond vert */
         & header {
             display: flex;
 
             background-color: var(--green-bg);
+            color: var(--black);
 
             & dl {
                 flex: 1;
@@ -63,6 +65,7 @@ body > main {
         & div {
             margin: 2em;
 
+            /* Encadré d'avertissement */
             & .information {
                 color: var(--red-2);
                 background-color: color-mix(in srgb, var(--red-2) 15%, transparent);
@@ -71,16 +74,19 @@ body > main {
                 padding: 1em;
             }
 
+            /* Titre du dossier */
             & .question {
+                margin: 0.83em 0;
+
                 color: var(--green);
-                
                 font-size: 2em;
             }
 
-            & .texte {
+            & .text {
                 color: var(--text);
             }
 
+            /* Journal horodaté des transmissions */
             & table {
                 width: 100%;
                 align-self: stretch;
@@ -108,9 +114,10 @@ body > main {
                     }
 
                     & tr:hover {
-                        background-color: var(--brakground-g-2);
+                        background-color: var(--background-g-2);
                     }
 
+                    /* Dernière colonne : une couleur par niveau d'alerte */
                     & tr:nth-child(1) td:last-child { color: var(--yellow-2); }
                     & tr:nth-child(2) td:last-child { color: var(--red-3); }
                     & tr:nth-child(3) td:last-child { color: var(--green-2); }
@@ -126,6 +133,7 @@ body > main {
                 border-top: 1px solid var(--background-g);
             }
 
+            /* Boutons d'action du dossier */
             & .actions {
                 align-self: stretch;
                 display: flex;
@@ -144,6 +152,11 @@ body > main {
 
                     cursor: pointer;
                     transition: background-color 0.2s, color 0.2s;
+
+                    &:disabled {
+                        opacity: 0.6;
+                        cursor: wait;
+                    }
                 }
 
                 & .btn-scan {
@@ -166,10 +179,35 @@ body > main {
                     }
                 }
             }
+
+            /* Journal de scan, rempli par le script au clic sur les boutons (voir toaster-actions.js) */
+            & .scan-log {
+                margin-top: 2em;
+                padding: 1em;
+
+                background-color: var(--card-alt);
+                color: var(--card-text);
+
+                border: 0.1em solid var(--border);
+
+                font-weight: 400;
+
+                & p {
+                    margin: 0.3em 0;
+                }
+            }
         }
     }
 }
 
+/* Tablettes : marges réduites */
+@media (max-width: 1023px) {
+    body > main {
+        padding: 3em;
+    }
+}
+
+/* Mobile : police et marges réduites */
 @media (max-width: 767px) {
     body > main {
         padding: 0.5em;

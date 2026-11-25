@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cazzuloa.github.io/La-Grande-Revelation/sitemap.xml

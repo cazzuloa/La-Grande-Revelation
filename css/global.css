@@ -1,3 +1,6 @@
+/* Styles communs à toutes les pages : base, bandeau défilant, navigation, pied de page
+   et pluie de lutins du thème arc-en-ciel. Les couleurs viennent des variables du thème. */
+
 * {
     box-sizing: border-box;
 }
@@ -11,6 +14,76 @@ html, body {
     font-family: 'Courier Prime', 'Courier New', monospace;
 }
 
+/* Texte lu par les lecteurs d'écran mais réduit à un pixel invisible */
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+/* La cible d'un ancrage s'arrête sous la barre de navigation collante */
+:target {
+    scroll-margin-top: 4em;
+}
+
+/* Défilement fluide pour les ancres, sauf si le visiteur demande la réduction des mouvements */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Lien de fin de page : remonte en haut (la cible #top est posée sur body) */
+.back-to-top {
+    display: inline-block;
+
+    margin-top: 2em;
+
+    color: var(--green);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline: 0.15em solid var(--yellow);
+        outline-offset: 0.1em;
+    }
+}
+
+/* Lien d'évitement : hors écran sauf au clavier, il saute directement au contenu */
+body > .skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    padding: 0.6em 1em;
+
+    background-color: var(--green);
+    color: var(--background);
+
+    text-decoration: none;
+
+    transform: translateY(-100%);
+
+    &:focus {
+        transform: translateY(0);
+    }
+}
+
+/* Bandeau d'alerte : le message défile en continu */
 body > header {
     padding: 1em;
     background-color: var(--red);
@@ -45,14 +118,65 @@ body > header {
 
         & span {
             flex-shrink: 0;
-            animation: defiler 30s linear infinite;
+            animation: marquee 30s linear infinite;
         }
     }
 }
 
-@keyframes defiler {
+@keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-100%); }
+}
+
+/* Navigation principale : collante, elle reste visible quand la page défile.
+   La page en cours est signalée par aria-current */
+body > nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    padding: 0.5em 1em;
+
+    background-color: var(--signals-bg);
+
+    border-bottom: 0.1em solid var(--border);
+
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 0.3em 0.8em;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    & a {
+        display: inline-block;
+
+        padding: 0.3em 0.7em;
+
+        color: var(--green);
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &[aria-current="page"] {
+            background-color: var(--green);
+            color: var(--background);
+        }
+
+        &:focus-visible {
+            outline: 0.15em solid var(--yellow);
+            outline-offset: 0.1em;
+        }
+    }
 }
 
 body > footer {
@@ -83,7 +207,9 @@ body > footer {
     }
 }
 
-body > .lutins {
+/* Pluie de lutins (thème arc-en-ciel) : couche fixe au-dessus de la page.
+   Chaque image reçoit sa position, sa taille et sa vitesse du script */
+body > .leprechauns {
     position: fixed;
     inset: 0;
 
@@ -94,14 +220,14 @@ body > .lutins {
         top: -8em;
         left: var(--x);
 
-        width: var(--taille);
+        width: var(--size);
         height: auto;
 
-        animation: pleuvoir var(--duree) linear var(--delai) infinite;
+        animation: rain var(--duration) linear var(--delay) infinite;
     }
 }
 
-@keyframes pleuvoir {
+@keyframes rain {
     from { transform: translateY(0) rotate(-10deg); }
     50% { transform: translateY(calc(50vh + 8em)) rotate(10deg); }
     to { transform: translateY(calc(100vh + 16em)) rotate(-10deg); }
@@ -127,6 +253,16 @@ body > .lutins {
         }
     }
 
+    body > nav {
+        padding: 0.4em 0.6em;
+
+        & a {
+            padding: 0.25em 0.5em;
+
+            font-size: 0.85em;
+        }
+    }
+
     body > footer {
         padding: 0.7em;
 
@@ -141,8 +277,14 @@ body > .lutins {
     }
 }
 
+/* Réduction des mouvements demandée par le visiteur :
+   le bandeau reste figé et la pluie de lutins n'est pas affichée */
 @media (prefers-reduced-motion: reduce) {
-    body > .lutins {
+    body > header p span {
+        animation: none;
+    }
+
+    body > .leprechauns {
         display: none;
     }
 }

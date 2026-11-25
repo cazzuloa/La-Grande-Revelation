@@ -1,3 +1,5 @@
+/* Thème sombre, utilisé par défaut : palette de couleurs du site */
+
 :root {
     --red : #9e1a1a;
     --red-2 : #ff6060;
@@ -13,7 +15,7 @@
     --border : #1f2127;
     --text : #ffffff;
     --background-g : #1f2a24;
-    --brakground-g-2 : #01ff6610;
+    --background-g-2 : #01ff6610;
     --muted: #8f9bb3;
     --signals-bg: #10131a;
     --card-alt: #0d0f14;

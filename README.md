@@ -15,12 +15,11 @@ Le site est une parodie satirique sur les théories du complot : chaque page dé
 
 - **Cours** : Développement d'interfaces Web
 - **Enseignant responsable** : Pierrick Delamotte (pierrick.delamotte@gmail.com)
-- **Équipe** : trinôme (noms par ordre lexicographique des noms de famille)
 - **Sujet** : https://www.mickael-martin-nevot.com/univ-amu/iut/but-informatique/developpement-d-interfaces-web/?:s18-projet.pdf
 - **Jalons** :
-  - Maquette (Figma) : 13/11/2026 à 23h00
-  - Rendu du projet : 26/11/2026 à 23h00
-  - Présentation orale : 27/11/2026 à 13h30 (max 20 min)
+  - Maquette (Figma)
+  - Rendu du projet
+  - Présentation orale
 
 ## Liens utiles
 

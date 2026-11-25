@@ -34,31 +34,43 @@ Le site est une parodie satirique sur les théories du complot : chaque page dé
 La-Grande-Revelation/
 ├── index.html
 ├── assets/
-│   └── images/
+│   ├── images/
+│   └── videos/
 ├── css/
-│   ├── dark.css
-│   ├── global.css
-│   ├── index.css
-│   ├── pigeons.css
-│   ├── grille-pain.css
-│   ├── terre-plate.css
-│   ├── white.css
-│   └── rainbow.css
+│   ├── contact.css / contact.min.css
+│   ├── dark.css / dark.min.css
+│   ├── flat-earth.css / flat-earth.min.css
+│   ├── global.css / global.min.css
+│   ├── index.css / index.min.css
+│   ├── pigeons.css / pigeons.min.css
+│   ├── rainbow.css / rainbow.min.css
+│   ├── toaster.css / toaster.min.css
+│   └── white.css / white.min.css
 ├── js/
-│   └── theme-changer.js
+│   ├── contact-form.js
+│   ├── redacted-text.js
+│   ├── theme-changer.js
+│   └── toaster-actions.js
 ├── pages/
-│   ├── grille-pain.html
+│   ├── contact.html
+│   ├── flat-earth.html
 │   ├── pigeons.html
-│   └── terre-plate.html
+│   └── toaster.html
 ├── docs/
+│   ├── prompts/
+│   │   └── historique-des-prompts.md
 │   └── skill/
 │       └── audit-projet/
 │           └── SKILL.md
+├── tools/
+│   └── minify.sh
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── CONTRIBUTING.md
-└── README.md
+├── README.md
+├── robots.txt
+└── sitemap.xml
 ```
 
 ## Fonctionnalités
@@ -68,6 +80,10 @@ La-Grande-Revelation/
 - Changement de thème (clair/sombre) via JavaScript et feuilles de style alternatives.
 - Design responsive (smartphone, tablette, ordinateur).
 - Formulaire de contact/avis avec génération d'e-mail.
+
+## Outils
+
+Dans le dossier **tools**, le fichier **minify.sh** permet de généré les fichiers minifié du css
 
 ## Sources et crédits
 
@@ -82,7 +98,7 @@ _Toute source utilisée doit être citée (obligation juridique)._
 
 ## Historique des prompts IA
 
-L'historique intégral des prompts utilisés avec des systèmes d'aide à la décision (IA/SAAD) est disponible dans le dossier `prompts/` (ou via le lien Notion/Langfuse fourni à l'enseignant).
+L'historique intégral des prompts utilisés avec des systèmes d'aide à la décision (IA/SAAD) est disponible dans le dossier `docs/prompts/`.
 
 ## Gestion de projet
 
@@ -112,4 +128,9 @@ Ce projet est distribué sous licence **Creative Commons Attribution - NonCommer
 
 ## Contact
 
-Équipe projet — _à compléter (e-mails et téléphones)_.
+Pour toute question concernant ce projet, vous pouvez contacter les membres de l'équipe :
+
+- Anthony Cazzulo : anthony.cazzulo [at] etu.univ-amu.fr
+- Lucas Boucq : lucas.boucq [at] etu.univ-amu.fr
+- Clément Coutellier : clement.coutellier [at] etu.univ-amu.fr
+- Thomas Tolsa : thomas.tolsa [at] etu.univ-amu.fr

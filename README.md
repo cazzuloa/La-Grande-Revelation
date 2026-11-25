@@ -1,0 +1,115 @@
+# La Grande Révélation
+
+![GitHub repo size](https://img.shields.io/github/repo-size/cazzuloa/La-Grande-Revelation)
+![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/cazzuloa/La-Grande-Revelation)
+![GitHub contributors](https://img.shields.io/github/contributors/cazzuloa/La-Grande-Revelation)
+![GitHub issues](https://img.shields.io/github/issues/cazzuloa/La-Grande-Revelation)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/cazzuloa/La-Grande-Revelation)
+
+Site web statique réalisé dans le cadre du cours **Développement d'interfaces Web** (BUT Informatique, 1re année — Aix-Marseille Université, IUT d'Aix-en-Provence).
+
+Le site est une parodie satirique sur les théories du complot : chaque page démonte un « dossier » (Terre plate, pigeons, grille-pain…) avec un ton humoristique.
+
+## Informations académiques
+
+- **Cours** : Développement d'interfaces Web
+- **Enseignant responsable** : Pierrick Delamotte (pierrick.delamotte@gmail.com)
+- **Équipe** : trinôme (noms par ordre lexicographique des noms de famille)
+- **Sujet** : https://www.mickael-martin-nevot.com/univ-amu/iut/but-informatique/developpement-d-interfaces-web/?:s18-projet.pdf
+- **Jalons** :
+  - Maquette (Figma) : 13/11/2026 à 23h00
+  - Rendu du projet : 26/11/2026 à 23h00
+  - Présentation orale : 27/11/2026 à 13h30 (max 20 min)
+
+## Liens utiles
+
+- **Site déployé (GitHub Pages)** : https://cazzuloa.github.io/La-Grande-Revelation/
+- **Repo GitHub** : https://github.com/cazzuloa/La-Grande-Revelation
+- **Maquette Figma** : _à compléter (URL partagée avec l'ensemble des wireframes adaptés aux supports)_
+
+## Structure du projet
+
+```
+La-Grande-Revelation/
+├── index.html
+├── assets/
+│   └── images/
+├── css/
+│   ├── dark.css
+│   ├── global.css
+│   ├── index.css
+│   ├── pigeons.css
+│   ├── grille-pain.css
+│   ├── terre-plate.css
+│   ├── white.css
+│   └── rainbow.css
+├── js/
+│   └── theme-changer.js
+├── pages/
+│   ├── grille-pain.html
+│   ├── pigeons.html
+│   └── terre-plate.html
+├── docs/
+│   └── skill/
+│       └── audit-projet/
+│           └── SKILL.md
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── PULL_REQUEST_TEMPLATE.md
+├── CONTRIBUTING.md
+└── README.md
+```
+
+## Fonctionnalités
+
+- Page d'accueil présentant les 4 dossiers classifiés.
+- Pages détaillées par dossier (`pages/`).
+- Changement de thème (clair/sombre) via JavaScript et feuilles de style alternatives.
+- Design responsive (smartphone, tablette, ordinateur).
+- Formulaire de contact/avis avec génération d'e-mail.
+
+## Sources et crédits
+
+- Icônes : [Heroicons](https://heroicons.com/)
+- Polices : [Google Fonts](https://fonts.google.com/) (Courier Prime, Noto Serif, Space Mono)
+- Bouton transparent : [StackOverflow — j08691](https://stackoverflow.com/a/22672444) (CC BY-SA 4.0)
+- Variables CSS : [W3Schools](https://www.w3schools.com/css/css3_variables.asp)
+- Référence HTML/CSS : [MDN Web Docs](https://developer.mozilla.org/fr/)
+- Gist utile : https://gist.github.com/whitingx/3840905
+
+_Toute source utilisée doit être citée (obligation juridique)._
+
+## Historique des prompts IA
+
+L'historique intégral des prompts utilisés avec des systèmes d'aide à la décision (IA/SAAD) est disponible dans le dossier `prompts/` (ou via le lien Notion/Langfuse fourni à l'enseignant).
+
+## Gestion de projet
+
+- Issues et pull requests : https://github.com/cazzuloa/La-Grande-Revelation/issues
+- Conventions de contribution : voir [CONTRIBUTING.md](CONTRIBUTING.md)
+- Templates d'issues/PR : `.github/ISSUE_TEMPLATE/` et `.github/PULL_REQUEST_TEMPLATE.md`
+
+## Installation locale
+
+1. Cloner le dépôt : `git clone https://github.com/cazzuloa/La-Grande-Revelation.git`
+2. Ouvrir `index.html` dans un navigateur, ou lancer un serveur local :
+   ```bash
+   python3 -m http.server 8000
+   ```
+3. Accéder à `http://localhost:8000`
+
+## Validation
+
+- HTML5 : https://validator.w3.org/nu/
+- CSS3 : https://jigsaw.w3.org/css-validator/
+- Accessibilité : WAVE / axe DevTools
+- Performances : Google Lighthouse
+
+## Licence
+
+Ce projet est distribué sous licence **Creative Commons Attribution - NonCommercial - ShareAlike (CC BY-NC-SA 4.0)**, conformément au sujet du cours.
+
+## Contact
+
+Équipe projet — _à compléter (e-mails et téléphones)_.

@@ -82,7 +82,10 @@ La-Grande-Revelation/
 
 ## Outils
 
-Dans le dossier **tools**, le fichier **minify.sh** permet de généré les fichiers minifié du css
+Dans le dossier **tools** :
+
+- **minify.sh** : génère les fichiers CSS minifiés du site.
+- **assemble-video.sh** : assemble les 8 GIFs du dossier `assets/videos/clips/` en une vidéo MP4 (`assets/videos/evidence.mp4`), avec muxage optionnel de la voix off. Script généré avec l'aide d'Opencode (IA). Voir aussi `docs/prompts/prompts-gifs-video.md` (prompts des GIFs) et `docs/prompts/script-voix-off-oeil-du-bunker.md` (script voix off).
 
 ## Sources et crédits
 

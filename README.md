@@ -17,7 +17,7 @@ Le site est une parodie satirique sur les théories du complot : chaque page dé
 ## Informations académiques
 
 - **Cours** : Développement d'interfaces Web
-- **Enseignant responsable** : Pierrick Delamotte (pierrick.delamotte@gmail.com)
+- **Enseignant responsable** : Pierrick Delamotte (pierrick.delamotte@gmail.com) — [GitHub](https://github.com/delamotte-pierrick)
 - **Sujet** : https://www.mickael-martin-nevot.com/univ-amu/iut/but-informatique/developpement-d-interfaces-web/?:s18-projet.pdf
 - **Jalons** :
   - Maquette (Figma)

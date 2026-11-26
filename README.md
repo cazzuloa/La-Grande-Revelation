@@ -114,6 +114,9 @@ Dans le dossier **tools** :
 - Variables CSS : [W3Schools](https://www.w3schools.com/css/css3_variables.asp)
 - Référence HTML/CSS : [MDN Web Docs](https://developer.mozilla.org/fr/)
 - Gist utile : https://gist.github.com/whitingx/3840905
+- Webp Laughing Leprechaun 1 (by SeriousTux) : [Openclipart](https://openclipart.org/detail/270548/laughing-leprechaun-1)
+- Fav Icons : [Thomas Tolsa](https://github.com/ThomassTolsa)
+- Utilisation et fonctionnement Github Projects (Tableau Kanban) : [Techcommunity Microsoft, Initiation à GitHub Projects - Partie I (Tableau Kanban), blacky-yg](https://techcommunity.microsoft.com/blog/educatordeveloperblog/initiation-%C3%A0-github-projects---partie-i-tableau-kanban/3784393)
 
 _Toute source utilisée doit être citée (obligation juridique)._
 

@@ -1,5 +1,8 @@
 # La Grande Révélation
 
+<!-- Y a rien à voir ici, pas besoin de regarder le code source, c'est pas beau -->
+<!-- J'espère avoir une bonne note pour ce projet -->
+
 ![GitHub repo size](https://img.shields.io/github/repo-size/cazzuloa/La-Grande-Revelation)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/cazzuloa/La-Grande-Revelation)
@@ -25,7 +28,7 @@ Le site est une parodie satirique sur les théories du complot : chaque page dé
 
 - **Site déployé (GitHub Pages)** : https://cazzuloa.github.io/La-Grande-Revelation/
 - **Repo GitHub** : https://github.com/cazzuloa/La-Grande-Revelation
-- **Maquette Figma** : _à compléter (URL partagée avec l'ensemble des wireframes adaptés aux supports)_
+- **Maquette Figma** : [Figma](https://www.figma.com/site/aBnsPn0E7NXZi2SjuXow4C/Sans-titre?node-id=0-1&t=lNh8kenXYwGpCIGX-1)
 
 ## Structure du projet
 

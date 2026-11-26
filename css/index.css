@@ -236,8 +236,9 @@ body > main {
 
     /* Preuve vidéo : le lecteur s'adapte à la largeur, rien n'est chargé avant la lecture */
     & .evidence {
-        margin: 1em;
-        padding: 2em;
+        max-width: 640px;
+        margin: 1em auto;
+        padding: 1.5em;
 
         background: var(--signals-bg);
 

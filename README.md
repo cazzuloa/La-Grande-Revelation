@@ -71,6 +71,7 @@ La-Grande-Revelation/
 ├── docs/
 │   ├── prompts/
 │   │   ├── historique-des-prompts.md
+│   │   ├── prompts-chatgpt-articles.md
 │   │   ├── prompts-gifs-video.md
 │   │   └── script-voix-off-oeil-du-bunker.md
 │   └── skill/

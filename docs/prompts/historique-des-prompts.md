@@ -27,7 +27,5 @@ Ce modèle d’historique de prompts, duplicable, offre à son utilisateur un so
 | Prompts GIFs vidéo | Opencode | Oui, série de 8 prompts Gemini pour la vidéo « L'œil du bunker » | Fichier : docs/prompts/prompts-gifs-video.md | Voir docs/prompts/prompts-gifs-video.md |
 | Assemblage vidéo + voix off | Opencode + ffmpeg | Oui, montage des 8 GIFs en MP4 24 s avec voix off (trailer) | Fichiers : assets/videos/evidence.mp4, evidence.fr.vtt, tools/assemble-video.sh, docs/prompts/script-voix-off-oeil-du-bunker.md | Voir docs/prompts/script-voix-off-oeil-du-bunker.md |
 | Génération des messages de commit | Copilot | Automatique | Les messages de commit sont générés automatiquement par Copilot | — |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
+| Rédaction du contenu des articles | ChatGPT | Oui, textes satiriques des 4 dossiers (accroches, preuves, pages détaillées) | Fichiers : index.html, pages/flat-earth.html, pages/pigeons.html, pages/toaster.html | Voir docs/prompts/prompts-chatgpt-articles.md |
 | --- | --- | --- | --- | --- |

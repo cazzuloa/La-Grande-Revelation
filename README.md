@@ -34,7 +34,15 @@ La-Grande-Revelation/
 ├── index.html
 ├── assets/
 │   ├── images/
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-32.png
+│   │   ├── favicon-192.png
+│   │   ├── leprechaun.webp
+│   │   └── og-image.jpg
 │   └── videos/
+│       ├── evidence-poster.jpg
+│       ├── evidence.fr.vtt
+│       └── evidence.mp4
 ├── css/
 │   ├── contact.css / contact.min.css
 │   ├── dark.css / dark.min.css
@@ -57,14 +65,19 @@ La-Grande-Revelation/
 │   └── toaster.html
 ├── docs/
 │   ├── prompts/
-│   │   └── historique-des-prompts.md
+│   │   ├── historique-des-prompts.md
+│   │   ├── prompts-gifs-video.md
+│   │   └── script-voix-off-oeil-du-bunker.md
 │   └── skill/
 │       └── audit-projet/
 │           └── SKILL.md
 ├── tools/
+│   ├── assemble-video.sh
 │   └── minify.sh
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── CONTRIBUTING.md
 ├── README.md

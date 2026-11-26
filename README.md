@@ -29,6 +29,8 @@ Le site est une parodie satirique sur les théories du complot : chaque page dé
 - **Site déployé (GitHub Pages)** : https://cazzuloa.github.io/La-Grande-Revelation/
 - **Repo GitHub** : https://github.com/cazzuloa/La-Grande-Revelation
 - **Maquette Figma** : [Figma](https://www.figma.com/site/aBnsPn0E7NXZi2SjuXow4C/Sans-titre?node-id=0-1&t=lNh8kenXYwGpCIGX-1)
+- **Board Kanban (GitHub Projects)** : https://github.com/users/cazzuloa/projects/2
+- **Milestones** : https://github.com/cazzuloa/La-Grande-Revelation/milestones
 
 ## Structure du projet
 

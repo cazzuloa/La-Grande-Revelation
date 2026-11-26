@@ -30,6 +30,8 @@ function initTheme() {
 
                 leprechaun.src = leprechaunSrc;
                 leprechaun.alt = "";
+                /* Décoratif : chargement différé, aucune priorité de téléchargement */
+                leprechaun.loading = "lazy";
 
                 leprechaun.style.setProperty("--x", `${Math.random() * 100}vw`);
                 leprechaun.style.setProperty("--size", `${2.5 + Math.random() * 2.5}em`);

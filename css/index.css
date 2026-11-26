@@ -28,11 +28,11 @@ body > main {
             }
         }
 
-        .button {
+        & .button {
             transition-duration: 0.3s;
         }
 
-        .button:hover {
+        & .button:hover {
             background-color: var(--red);
             color: var(--white);
         }
